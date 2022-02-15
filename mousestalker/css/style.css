@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* 全体レイアウト
+--------------------------------------- */
+.title{
+  margin-top: 40px;
+  text-align: center;
+}
+.box-inner{
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 500px auto ;
+}
+
+
+
+/* マウスストーカースタイル*/
+#stalker {
+  pointer-events: none; /*要素がポインターイベントの対象にならない*/
+  position: fixed;      /*画面の決まった位置に要素を固定*/
+  top: -5px;            /*座標調節（カーソル位置と円の中心を合わせる）*/
+  left: -5px;           /*座標調節（カーソル位置と円の中心を合わせる）*/
+  width: 10px;          /*マウスストーカーの直径*/
+  height: 10px;         /*マウスストーカーの直径*/
+  background: rgba(0,0,0,0.5); /*ドットの色*/
+  border-radius: 50%;   /*角丸*/
+  transition: transform 0.6s;/*付いてくるスピード*/
+  transition-timing-function: ease-out; /*トランジションは速い速度で始まり、速度を次第に遅く終わる*/
+  z-index: 999; /*重ね順*/
+}
